@@ -1,0 +1,336 @@
+@use './components' as *;
+@use './mixins' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.6rem;
+}
+
+//  NAVIGATION
+.nav {
+	position: sticky;
+	display: flex;
+	top: 0;
+	margin: 0 auto;
+	align-items: center;
+	width: 100%;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	font-size: 0;
+	z-index: 1000;
+	background-color: white;
+
+	&__logo {
+		position: relative;
+		font-size: 2rem;
+		left: 50px;
+
+		i {
+			color: black;
+		}
+	}
+	&__item {
+		position: relative;
+		padding: 20px 30px;
+		margin: 20px auto;
+		font-size: 1.5rem;
+		text-decoration: none;
+		line-height: 50px;
+		color: black;
+		transition: color 0.5s, background-color 0.5s;
+
+		&:hover {
+			background-color: black;
+			color: white;
+		}
+	}
+}
+
+// HEADER
+
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	height: 25vh;
+	width: 100%;
+	text-align: center;
+	color: white;
+	// background-image: url('/img/jungle-1807476_640.jpg');
+	// background-attachment: scroll;
+	// background-size: cover;
+	// background-position: center;
+	@include wideImages('/img/jungle-1807476_640.jpg');
+
+	&__shadow {
+		@include wideShadow;
+	}
+
+	&__heading {
+		position: relative;
+		left: 20%;
+		z-index: 6;
+	}
+	&__text {
+		position: relative;
+		left: 20%;
+		font-size: 3rem;
+		z-index: 6;
+	}
+}
+
+// MAIN
+
+.section-heading {
+	text-align: center;
+	margin: 2em auto;
+	font-size: 2em;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+// ABOUTUS - SECTION
+
+.aboutus {
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin: 2em 1em;
+	}
+
+	&__img {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	&__title {
+		margin-bottom: 0.5em;
+	}
+	&__text {
+		font-size: 1.4rem;
+	}
+}
+
+// ADVENTURE BANER
+
+.adventure {
+	position: relative;
+	display: flex;
+	margin-top: 2em;
+	justify-content: center;
+	align-items: center;
+	height: 20vh;
+	width: 100%;
+	text-align: center;
+	color: white;
+	@include wideImages('/img/girl-5785590_640.jpg');
+
+	&__shadow {
+		@include wideShadow;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+
+	&__text {
+		position: relative;
+		font-size: 3rem;
+		font-weight: 300;
+		z-index: 6;
+		border: 1px solid white;
+		padding: 0.5em 3em;
+	}
+}
+
+/// OFFERS
+///
+
+.offers {
+	margin: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+	height: 60vh;
+
+	&__boxes {
+		display: flex;
+		flex-direction: row;
+		margin: 2em;
+		justify-content: space-around;
+		height: 40vh;
+	}
+
+	&__option {
+		width: 25%;
+		padding: 1em;
+		box-shadow: 1px 0 8px rgba(0, 0, 0, 0.4);
+		border-radius: 2%;
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+
+		&-name {
+			font-size: 2rem;
+			font-weight: 300;
+		}
+
+		&-price {
+			font-size: 2em;
+			margin: 0.5em;
+		}
+		&-center {
+			margin-left: 40px;
+		}
+		&-info {
+			margin: 0.5em auto;
+			text-align: left;
+		}
+		&-button {
+			padding: 1em 3em;
+			margin: 2em;
+			box-shadow: 1px 0 8px rgba(0, 0, 0, 0.4);
+			border: none;
+			border-radius: 7%;
+			background-color: white;
+			letter-spacing: 1px;
+			cursor: pointer;
+			transition: 0.3s;
+
+			&:hover {
+				background-color: #18af52;
+			}
+		}
+		&-best {
+			background-color: #18af52;
+
+			&:hover {
+				background-color: #036e2c;
+				font-weight: 600;
+			}
+		}
+	}
+
+	h3 {
+		font-size: 1em;
+		font-weight: normal;
+	}
+
+	.fa-check {
+		color: #18af52;
+	}
+
+	.none {
+		color: rgba(0, 0, 0, 0.4);
+	}
+}
+
+// FOOTER
+
+.footer {
+	display: flex;
+
+	flex-direction: column;
+	background-color: #faf7f7;
+
+	&__boxes {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		align-items: center;
+		height: 25vh;
+	}
+	&__box {
+		display: flex;
+		width: 40%;
+		align-items: flex-start;
+		text-align: left;
+		flex-direction: row;
+
+		&-info {
+			display: inline-block;
+			width: 30%;
+			margin: 0 1em;
+		}
+		&-list {
+			margin: 0 auto;
+			list-style: none;
+
+			&-item {
+				font-size: 1.5rem;
+				padding: 1rem 0;
+
+				a {
+					text-decoration: none;
+					color: black;
+				}
+			}
+		}
+		&-logo {
+			font-size: 3rem;
+		}
+	}
+	&__bottom-text {
+		text-align: center;
+		padding: 2rem;
+	}
+}
+
+// ===========================
+// MEDIA
+// ===========================
+
+@media (min-width: 992px) {
+	.header {
+		background-image: url('/img/jungle-1807476_1920.jpg');
+	}
+
+	.adventure {
+		background-image: url('/img/girl-5785590_1920.jpg');
+	}
+}
+
+//// MEDIa
+
+@media (min-width: 576px) {
+	.aboutus {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+
+			&-text {
+				width: 55%;
+				&--right {
+					text-align: right;
+				}
+			}
+			&-img {
+				width: 40%;
+				&--right {
+					order: 1;
+				}
+			}
+		}
+
+		&__img {
+			margin-bottom: 0;
+			max-height: 300px;
+		}
+	}
+}
