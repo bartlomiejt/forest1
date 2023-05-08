@@ -126,7 +126,7 @@ body {
 	padding: 5rem;
 	text-align: center;
 	color: white;
-	@include wideImages('/img/jungle-1807476_640.jpg');
+	@include wideImages('../img/jungle-1807476_640.jpg');
 
 	&__shadow {
 		@include wideShadow;
@@ -190,7 +190,7 @@ body {
 
 	text-align: center;
 	color: white;
-	@include wideImages('/img/girl-5785590_640.jpg');
+	@include wideImages('../img/girl-5785590_640.jpg');
 
 	&__shadow {
 		@include wideShadow;
@@ -325,24 +325,22 @@ body {
 
 		&-info {
 			margin: 1rem 1rem;
-			
 		}
 		&-list {
 			list-style: none;
 			text-align: left;
-			
 
 			&-item {
 				font-size: 1.5rem;
 				padding: 1rem 0;
-				
-				a {
-				text-decoration: none;
-				color: black;
 
-				&:hover {
-					font-weight: 700;
-				}
+				a {
+					text-decoration: none;
+					color: black;
+
+					&:hover {
+						font-weight: 700;
+					}
 				}
 			}
 		}
@@ -502,7 +500,7 @@ body {
 
 		&__text {
 			font-size: 3rem;
-			padding: 1rem 3 rem;
+			padding: 1rem 3rem;
 		}
 	}
 
@@ -602,7 +600,7 @@ body {
 
 	.header {
 		padding: 10rem;
-		background-image: url('/img/jungle-1807476_1920.jpg');
+		background-image: url('../img/jungle-1807476_1920.jpg');
 
 		&__heading {
 			font-size: 2rem;
@@ -614,7 +612,7 @@ body {
 
 	.adventure {
 		padding: 8rem;
-		background-image: url('/img/girl-5785590_1920.jpg');
+		background-image: url('../img/girl-5785590_1920.jpg');
 
 		&__text {
 			font-size: 3.5rem;
