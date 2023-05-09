@@ -585,6 +585,9 @@ body {
 			font-size: 4rem;
 		}
 	}
+	.contact__form-btn {
+		grid-column: 1/3;
+	}
 }
 
 @media (min-width: 992px) {
